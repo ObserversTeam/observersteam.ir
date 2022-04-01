@@ -21,6 +21,7 @@
 .logo img {
     width: 50px;
     height: auto;
+    user-select: none;
 }
 
 .logo-title {
@@ -28,6 +29,7 @@
     font-weight: bold;
     color: #3d9cec;
     text-transform: uppercase;
+    user-select: none;
 }
 
 .nav-links {
