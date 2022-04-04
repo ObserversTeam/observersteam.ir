@@ -1,201 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
-
-body {
-  font-family: "Rubik", sans-serif;
-  margin: 0;
-}
-
-body::-webkit-scrollbar {
-  width: 1rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: #141416;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #3b3b3b;
-}
-
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 40px;
-  padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    padding: 1rem;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  width: 50px;
-  height: auto;
-  user-select: none;
+    width: 50px;
+    height: auto;
+    user-select: none;
 }
 
 .logo-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #3d9cec;
-  text-transform: uppercase;
-  user-select: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3d9cec;
+    text-transform: uppercase;
+    user-select: none;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 .nav-link a:link,
 .nav-link a:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #3d9cec;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #3d9cec;
+    font-size: 1.2rem;
 }
 
 .nav-link {
-  display: block;
-  margin: 0 2rem;
+    display: block;
+    margin: 0 2rem;
 }
 
 .nav-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 .nav-icon svg {
-  width: 30px;
-  margin: 0 1rem;
-}
-
-.header__logo {
-  position: absolute;
-  width: 588px;
-  height: 520px;
-  left: 329px;
-  top: 210px;
-  background-blend-mode: darken;
-}
-
-#observers {
-  position: absolute;
-  width: 915px;
-  height: 171px;
-  left: 535px;
-  top: 303px;
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 144px;
-  line-height: 171px;
-  /* identical to box height */
-  text-align: center;
-  color: #fff;
-}
-
-#observers__slogan {
-  position: absolute;
-  width: 653px;
-  height: 76px;
-  left: 569px;
-  top: 449px;
-
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 76px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #ffffff;
-}
-
-#scroll__show {
-  position: absolute;
-  width: 50px;
-  height: 64px;
-  left: 925px;
-  top: 880px;
-  color: #339af0;
-}
-
-.about__title {
-  position: absolute;
-  width: 229px;
-  height: 76px;
-  left: 855px;
-  top: 1350px;
-
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 64px;
-  line-height: 76px;
-  /* identical to box height */
-
-  text-align: center;
-
-  color: #339af0;
-}
-
-.about__desc {
-  position: absolute;
-  width: 930px;
-  height: 464px;
-  left: 515px;
-  top: 1465px;
-
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 38px;
-  line-height: 153.5%;
-  /* or 55px */
-
-  text-align: center;
-  letter-spacing: 0.025em;
-
-  color: #ffffff;
-}
-
-.projects__title {
-  position: absolute;
-  width: 353px;
-  height: 76px;
-  left: 805px;
-  top: 2129px;
-
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 64px;
-  line-height: 76px;
-  /* identical to box height */
-
-  text-align: center;
-  color: #339af0;
+    width: 30px;
+    margin: 0 1rem;
 }
 
 #preloader {
-  background: #000 url("https://i.pinimg.com/originals/b8/71/76/b8717641f46cdfdced2c86e984f07c11.gif") no-repeat center center;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
+    background: #000 url("https://i.pinimg.com/originals/b8/71/76/b8717641f46cdfdced2c86e984f07c11.gif") no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
