@@ -13,3 +13,31 @@ body {
     background-color: #1C1C1C;
     color: #eeeeee;
 }
+
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #141416;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #3b3b3b;
+}
+
+.margin--top-1 {
+    margin-top: 1rem;
+}
+
+.margin--top-2 {
+    margin-top: 4rem;
+}
+
+.margin--top-3 {
+    margin-top: 8rem !important;
+}
+
+.margin--top-4 {
+    margin-top: 16rem !important;
+}
