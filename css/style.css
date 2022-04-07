@@ -137,3 +137,35 @@
     font-size: 2.4rem;
     width: 40rem;
 }
+
+.projects {
+    gap: 4rem;
+}
+
+.project {}
+
+.project img {
+    /* max-width: 48rem; */
+    /* max-height: 24rem; */
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.project-desc {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+}
+
+.project-desc a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #3d9cec;
+    font-size: 1.6rem;
+}
+
+.project-desc>i {
+    cursor: pointer;
+    color: #c2255c;
+    font-size: 1.6rem;
+}

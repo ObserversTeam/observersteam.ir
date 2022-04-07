@@ -26,6 +26,18 @@ body::-webkit-scrollbar-thumb {
     background: #3b3b3b;
 }
 
+.grid {
+    display: grid;
+}
+
+.grid-2-c {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-c {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .margin--top-1 {
     margin-top: 1rem;
 }
