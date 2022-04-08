@@ -139,14 +139,10 @@
 }
 
 .projects {
-    gap: 4rem;
+    gap: 5rem;
 }
 
-.project {}
-
 .project img {
-    /* max-width: 48rem; */
-    /* max-height: 24rem; */
     width: 100%;
     border-radius: 2rem;
 }
@@ -168,4 +164,75 @@
     cursor: pointer;
     color: #c2255c;
     font-size: 1.6rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.card {
+    position: relative;
+    width: 28rem;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card__img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #3d9cec;
+}
+
+.card .card__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1C1C1C;
+}
+
+.card .card__social-icons {
+    text-decoration: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 2rem;
+}
+
+.card .card__social-icons a:link,
+.card .card__social-icons a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.card .card__name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3d9cec;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.card .role {
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
 }
