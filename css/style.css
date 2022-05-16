@@ -331,6 +331,8 @@
     opacity: 1;
     transform: translateX(0%);
 }
+
+
 .menu-items .menu-item {
     text-decoration: none;
     font-size: 2rem;
