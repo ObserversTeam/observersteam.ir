@@ -5,6 +5,7 @@
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .navbar {
@@ -156,6 +157,7 @@
 .project-desc {
     display: flex;
     justify-content: space-between;
+    align-self: center;
     padding: 1rem 0.5rem;
 }
 
@@ -170,6 +172,9 @@
     cursor: pointer;
     color: #c2255c;
     font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cards {
@@ -339,4 +344,46 @@
     font-weight: 700;
     padding: 2rem;
     color: #3d9cec;
+}
+
+
+
+.go-down[data-element="1"] {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 5rem;
+    right:calc(50% - 7.5px);
+
+    transform: rotate(45deg) ;
+    border-right: 3px  solid #3d9cec;
+    border-bottom: 3px solid #3d9cec;
+    animation: updown 1s  ease-in-out 2s infinite ;
+    
+}
+.go-down[data-element="2"] {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 4rem;
+    right:calc(50% - 7.5px);
+
+    transform: rotate(45deg);
+    border-right: 3px  solid #3d9cec;
+    border-bottom: 3px solid #3d9cec;
+    animation: updown 1s  ease-in-out 2s infinite ;
+    
+}
+
+
+@keyframes updown {
+    0% {
+        transform: translateY(0) rotate(45deg) ;
+    }
+    50% {
+        transform: translateY(10px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(45deg);
+    }
 }
