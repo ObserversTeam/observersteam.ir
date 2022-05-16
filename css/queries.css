@@ -34,5 +34,42 @@
     .menu {
         display: flex;
     }
+    .project img {
+        border-radius: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .intro__logo {
+        
+        transform: translate(-50%, -60%);
+    }
+    .intro__logo img {
+        width: 100%;
+
+    }
+    .intro__title {
+        font-size: 4rem;
+    }
+    .intro__subtitle {
+        font-size: 3rem;
+    }
+    .about__text p {
+        font-size: 1.6rem;
+        width: 30rem;
+    }
+    .form {
+        font-size: 1.5rem;
+    }
+
+    .form__input {
+        display: flex;
+        flex-direction: column;
+    }
+    .info__input input {
+        width: 100%;
+    }
+    
     
 }
