@@ -53,3 +53,14 @@ body::-webkit-scrollbar-thumb {
 .margin--top-4 {
     margin-top: 16rem !important;
 }
+
+input,textarea {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    background:#3b3b3b ;
+    color: #eeeeee;
+    resize: none;
+}
