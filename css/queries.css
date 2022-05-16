@@ -66,6 +66,7 @@
     .form__input {
         display: flex;
         flex-direction: column;
+        
     }
     .info__input input {
         width: 100%;
@@ -73,3 +74,12 @@
     
     
 }
+
+@media screen and (max-width: 365px) {
+    .form__input{
+        width: 30rem;
+    }
+    
+    
+}
+    
