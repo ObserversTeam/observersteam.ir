@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" defer>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css">
 
 </head>
 
@@ -19,8 +20,19 @@
     <div id="preloader">
 
     </div>
-
+    <div class="menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+    </div>
+    <div class="menu-items">
+        <a class="menu-item" href="#about">About</a>
+        <a class="menu-item" href="#projects">Projects</a>
+        <a class="menu-item" href="#team">Team</a>
+        <a class="menu-item" href="#contact">Contact</a>
+    </div>
     <section class="container header">
+        
         <nav class="navbar">
             <div class="logo">
                 <img draggable="false" src="img/obs.png" alt="Observers Logo" class="logo-img" />
@@ -81,14 +93,14 @@
                 <h1 class="intro__title">
                     Observers
                 </h1>
-                <h2 class="intro__subtitle">
+                <h2 class="intro__subtitle ">
                     A Development Team
                 </h2>
             </div>
 
         </div>
     </section>
-    <section class="container about__us">
+    <section class="container about__us" id="about">
         <div class="heading__title">
             <h1>
                 About
@@ -100,7 +112,7 @@
         </div>
 
     </section>
-    <section class="container margin--top-4">
+    <section class="container margin--top-4" id="projects">
         <div class="heading__title">
             <h1>
                 Projcets
@@ -136,7 +148,7 @@
             </div>
         </div>
     </section>
-    <section class="container margin--top-4">
+    <section class="container margin--top-4" id="team">
         <div class="heading__title">
             <h1>
                 Team
@@ -145,7 +157,7 @@
         <div class="cards">
             <div class="card">
                 <div class="card__img">
-                    <img src="https://cdn.discordapp.com/avatars/743798422435397642/1c71b1902ff2c6a99c8cc45b4079a09d.png?size=1024" alt="HO3EiNWAVE Avatar">
+                    <img src="https://cdn.discordapp.com/avatars/488989873986994179/26ad189a9f2b7e866affd441258f65c2.png?size=1024" alt="HO3EiNWAVE Avatar">
                 </div>
                 <div class="card__social-icons">
                     <a href=""><i class="fa-brands fa-discord"></i></a>
@@ -164,7 +176,7 @@
             </div>
             <div class="card">
                 <div class="card__img">
-                    <img src="https://cdn.discordapp.com/avatars/500740143532212245/41e7fce79573435e7334a7eea54766cf.png?size=1024" alt="Doci Avatar">
+                    <img src="https://cdn.discordapp.com/avatars/500740143532212245/230c6db883934c7338e9c7338cced890.png?size=1024" alt="Doci Avatar">
                 </div>
                 <div class="card__social-icons">
                     <a href=""><i class="fa-brands fa-discord"></i></a>
@@ -183,7 +195,7 @@
             </div>
             <div class="card">
                 <div class="card__img">
-                    <img src="https://cdn.discordapp.com/avatars/805166992432431124/bfcbf3cd3ccb458cd28c032508ca4b38.png?size=1024" alt="Bardia Avatar">
+                    <img src="https://cdn.discordapp.com/avatars/805166992432431124/d4bf26277db175958d73a2d143b12e63.png?size=1024" alt="Bardia Avatar">
                 </div>
                 <div class="card__social-icons">
                     <a href=""><i class="fa-brands fa-discord"></i></a>
@@ -202,7 +214,7 @@
             </div>
             <div class="card">
                 <div class="card__img">
-                    <img src="https://cdn.discordapp.com/avatars/805166992432431124/bfcbf3cd3ccb458cd28c032508ca4b38.png?size=1024" alt="Reza Koala Avatar">
+                    <img src="https://cdn.discordapp.com/avatars/828597469180592188/b68d54c22792774b93cc954b74c01781.png?size=1024" alt="Reza Koala Avatar">
                 </div>
                 <div class="card__social-icons">
                     <a href=""><i class="fa-brands fa-discord"></i></a>
@@ -220,7 +232,7 @@
                 </div>
             </div>
     </section>
-    <section class="container margin--top-4">
+    <section class="container margin--top-4" id="contact">
         <div class="heading__title">
             <h1>
                 Contact
@@ -245,8 +257,10 @@
 
     </section>
 
-    <script src="js/preloader.js"></script>
-    <script src="https://kit.fontawesome.com/a122db10d9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/a122db10d9.js" crossorigin="anonymous"  defer></script>
+    <script src="js/preloader.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
 
 </html>

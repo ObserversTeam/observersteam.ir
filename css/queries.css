@@ -1,0 +1,38 @@
+@media screen and (max-width: 991px) {
+    .intro__title {
+        font-size: 8rem;
+    }
+    .intro__subtitle {
+        font-size: 6rem;
+    }
+    .intro__logo {
+        transform: translate(-50%, -50%);
+    }
+    .form {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
+    .intro__logo {
+        font-size: 7rem;
+        transform: translate(-50%, -60%);
+    }
+    .intro__title {
+        font-size: 5rem;
+    }
+    .intro__subtitle {
+        font-size: 5rem;
+    }
+    .form {
+        font-size: 1.5rem;
+    }
+    .menu {
+        display: flex;
+    }
+    
+}
