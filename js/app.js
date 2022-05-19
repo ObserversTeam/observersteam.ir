@@ -20,6 +20,7 @@ $(".menu-item").click(function () {
   NavVisibily = false;
 });
 $(document).ready(function () {
+  $("#preloader").hide();
   setTimeout(() => {
     gsap.fromTo(
       ".intro",
