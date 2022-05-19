@@ -19,3 +19,13 @@ $(".menu-item").click(function () {
 
   NavVisibily = false;
 });
+$(document).ready(function () {
+  setTimeout(() => {
+    gsap.fromTo(
+      ".intro",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+  }, 500);
+  //   $(".intro").addClass("animate__animated animate__bounce");
+});

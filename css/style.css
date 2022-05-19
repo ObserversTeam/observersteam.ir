@@ -72,7 +72,7 @@
 }
 
 #preloader {
-    background: #000 url("https://i.pinimg.com/originals/b8/71/76/b8717641f46cdfdced2c86e984f07c11.gif") no-repeat center center;
+    background: #000 url("../img/mainpre.gif") no-repeat center center;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -87,6 +87,7 @@
     width: 100%;
     position: relative;
     flex-grow: 1;
+    opacity: 0;
 }
 
 .intro__logo {
