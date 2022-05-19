@@ -1,4 +1,22 @@
 @media screen and (max-width: 991px) {
+    .about__us-content {
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
+        
+    .about__us-content lottie-player {
+        grid-column: auto;
+        grid-row: 1 /2;
+        width: 100%;
+        margin:0 auto;
+    }
+    .about__us-content .about__text {
+        grid-column: auto;
+        grid-row: 2/3;
+        width: 40rem;
+        margin: 0 auto;
+    }
+
     .intro__title {
         font-size: 8rem;
     }
@@ -27,6 +45,9 @@
     }
     .intro__subtitle {
         font-size: 5rem;
+    }
+    .about__us-content .about__text {
+        width: 100%;
     }
     .form {
         font-size: 1.5rem;
@@ -75,7 +96,7 @@
     
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 369px) {
     .form__input{
         width: 30rem;
     }
