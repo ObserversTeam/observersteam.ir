@@ -28,5 +28,4 @@ $(document).ready(function () {
       { opacity: 1, y: 0, duration: 1 }
     );
   }, 500);
-  //   $(".intro").addClass("animate__animated animate__bounce");
 });

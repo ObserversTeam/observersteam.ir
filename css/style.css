@@ -374,7 +374,8 @@
     transform: rotate(45deg);
     border-right: 3px solid #3d9cec;
     border-bottom: 3px solid #3d9cec;
-    animation: updown 1s ease-in-out 2s infinite;
+    animation: updown 1.5s ease-in-out 2s infinite;
+    border-radius: 3px;
 }
 
 .go-down[data-element="2"] {
@@ -387,7 +388,8 @@
     transform: rotate(45deg);
     border-right: 3px solid #3d9cec;
     border-bottom: 3px solid #3d9cec;
-    animation: updown 1s ease-in-out 2s infinite;
+    animation: updown 1.5s ease-in-out 2s infinite;
+    border-radius: 3px;
 }
 
 @keyframes updown {
