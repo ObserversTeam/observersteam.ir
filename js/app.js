@@ -54,7 +54,7 @@ $(document).ready(async () => {
   }, 500);
   LSdata = JSON.parse(localStorage.getItem("projects"));
   for (const key of LSdata) {
-    let likes = await $.ajax({
+    let likes = $.ajax({
       url: `${BaseUrl}/like`,
       type: "POST",
       data: {
