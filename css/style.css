@@ -194,13 +194,21 @@
     font-size: 1.6rem;
 }
 
-.project-desc>i {
+.project-desc p>i {
     cursor: pointer;
     color: #c2255c;
     font-size: 1.6rem;
+    
+}
+
+.project-desc  p  {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 0rem 1rem;
 }
 
 .cards {
