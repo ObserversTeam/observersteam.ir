@@ -1,5 +1,6 @@
 let NavVisibily = false;
-const BaseUrl = "https://api2.observersteam.ir";
+const BaseUrl = "http://localhost:3000";
+
 $(".menu").click(function () {
   if (!NavVisibily) {
     $(".menu-items").attr("data-menu-state", "open");
@@ -19,6 +20,7 @@ $(".menu-item").click(function () {
 
   NavVisibily = false;
 });
+
 function gh(length) {
   var result = "";
   var characters =
@@ -29,6 +31,7 @@ function gh(length) {
   }
   return result;
 }
+
 if (localStorage.getItem("token") == null) {
   localStorage.setItem("token", gh(20));
 }
@@ -44,6 +47,39 @@ localStorage.getItem("projects") == null
   : "";
 
 $(document).ready(async () => {
+  // Get Users from api and update the page
+  let users = await $.ajax({
+    url: `${BaseUrl}/team`,
+    type: "GET",
+  });
+
+  for (const user of users) {
+    // set the user's avatar
+    $(`.card[data-userid="${user.id}"] .card__img img`).attr(
+      "src",
+      `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=512`
+    );
+    // set the user's discord tag
+
+    $(
+      `.card[data-userid="${user.id}"] .card__social-icons i[data-discord-username="discord"]`
+    )[0].setAttribute(
+      "data-discord-username",
+      `${user.username}#${user.discriminator}`
+    );
+    // set the user's instagram username
+    $(`.card[data-userid="${user.id}"] .card__social-icons .instagram`).attr(
+      "href",
+      `https://www.instagram.com/${user.instagram}`
+    );
+
+    // set the user's github username
+    $(`.card[data-userid="${user.id}"] .card__social-icons .github`).attr(
+      "href",
+      `https://github.com/${user.github}`
+    );
+    console.log(user.id);
+  }
   $("#preloader").hide();
   setTimeout(() => {
     gsap.fromTo(
@@ -52,6 +88,8 @@ $(document).ready(async () => {
       { opacity: 1, y: 0, duration: 1 }
     );
   }, 500);
+
+  // Get Likes from localStorage and api and update the page
   lsData = JSON.parse(localStorage.getItem("projects"));
   let likes = await $.ajax({
     url: `${BaseUrl}/like`,
@@ -71,6 +109,16 @@ $(document).ready(async () => {
       element.parentElement.childNodes[0].nodeValue = likes.data[like].likes;
     }
   }
+  //   get username when the user clicks on the discord icon
+  $(".card__social-icons i[data-discord-username]").click(function (e) {
+    e.preventDefault();
+    let username = $(this).attr("data-discord-username");
+    navigator.clipboard.writeText(username);
+    $(".copy-clipboard").addClass("copied");
+    setTimeout(() => {
+      $(".copy-clipboard").removeClass("copied");
+    }, 1000 * 4);
+  });
 });
 
 $(".project-desc p i").click((e) => {
@@ -113,5 +161,12 @@ $(".project-desc p i").click((e) => {
       e.target.parentElement.childNodes[0].nodeValue = data.likes;
       e.target.classList.value = "bi bi-heart";
     });
+  }
+});
+
+// Form submit
+$(".form__input button").click((e) => {
+  e.preventDefault();
+  if ($(".form__input #name").val() == "") {
   }
 });

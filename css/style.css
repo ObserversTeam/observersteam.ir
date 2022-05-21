@@ -400,6 +400,49 @@
     border-radius: 3px;
 }
 
+.copy-clipboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    border-radius: 10rem;
+    position: fixed;
+    bottom : -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #313131;
+}
+.copy-clipboard i {
+    font-size: 1.8rem;
+    color: #3d9cec;
+}
+
+.copied {
+    animation: copied 4s ease-in-out infinite;
+}
+
+@keyframes copied {
+    0% {
+        bottom: -20%;
+        opacity: 0;
+    }
+    25% {
+        bottom: 1%;
+        opacity: 1;
+    }
+    85% {
+        bottom: 1%;
+        opacity: 1;
+    }
+    100% {
+        bottom: -20%;
+        opacity: 0;
+    }
+}
+
 @keyframes updown {
     0% {
         transform: translateY(0) rotate(45deg);
