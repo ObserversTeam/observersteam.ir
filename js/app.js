@@ -1,5 +1,5 @@
 let NavVisibily = false;
-const BaseUrl = "http://localhost:3000";
+const BaseUrl = "https://api2.observersteam.ir";
 $(".menu").click(function () {
   if (!NavVisibily) {
     $(".menu-items").attr("data-menu-state", "open");
