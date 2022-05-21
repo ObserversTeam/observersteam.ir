@@ -52,24 +52,23 @@ $(document).ready(async () => {
       { opacity: 1, y: 0, duration: 1 }
     );
   }, 500);
-  LSdata = JSON.parse(localStorage.getItem("projects"));
-  for (const key of LSdata) {
-    let likes = await $.ajax({
-      url: `${BaseUrl}/like`,
-      type: "POST",
-      data: {
-        q: "g",
-        id: key.id,
-      },
-    });
-    if (key.isLiked) {
-      element = $(`.project-desc p i[data-id="${key.id}"]`)[0];
+  lsData = JSON.parse(localStorage.getItem("projects"));
+  let likes = await $.ajax({
+    url: `${BaseUrl}/like`,
+    type: "POST",
+    data: {
+      q: "g",
+    },
+  });
+  for (const like in likes.data) {
+    if (lsData[like].isLiked) {
+      element = $(`.project-desc p i[data-id="${likes.data[like].id}"]`)[0];
       element.className = "bi bi-heart-fill";
-      element.parentElement.childNodes[0].nodeValue = likes.likes;
+      element.parentElement.childNodes[0].nodeValue = likes.data[like].likes;
     } else {
-      element = $(`.project-desc p i[data-id="${key.id}"]`)[0];
+      element = $(`.project-desc p i[data-id="${likes.data[like].id}"]`)[0];
       element.classList = "bi bi-heart";
-      element.parentElement.childNodes[0].nodeValue = likes.likes;
+      element.parentElement.childNodes[0].nodeValue = likes.data[like].likes;
     }
   }
 });
