@@ -438,6 +438,98 @@
 
 }
 
+.server-invite {
+
+    position: fixed;
+    bottom: -80%;
+    left:1%;
+    background-color: #232323;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    transition: all 1s ease-in-out;
+}
+
+.server-invite button.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #3d9cec;
+}
+
+.server-invite .server-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.server-invite .server-avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.server-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+
+.server-name {
+    font-weight: bold;
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.server-details .server-members {
+    width: 100%;
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.server-details p {
+    white-space: nowrap;
+}
+
+
+.server-members i {
+    font-size: 1rem;
+    color: #2ecc71;
+}
+
+.online-members {
+    margin-right: 0.5rem;
+}
+
+.server-invite-btn a {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white; 
+    border: none;
+    background-color: #399f59;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+.popup-invite {
+    position: fixed;
+    bottom:1%;
+}
+
 @keyframes copied {
     0% {
         bottom: -20%;

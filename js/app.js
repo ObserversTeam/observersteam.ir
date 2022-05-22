@@ -119,6 +119,17 @@ $(document).ready(async () => {
       $(".copy-clipboard").removeClass("copied");
     }, 1000 * 4);
   });
+  setTimeout(async () => {
+    let svinfo = await $.ajax({
+      url: `${BaseUrl}/svinfo`,
+      type: "GET",
+    });
+    $(".server-name p").text(svinfo.server_name);
+    $(".online-members span").text(svinfo.server_online);
+    $(".total-members span").text(svinfo.server_members);
+    $(".server-avatar img").attr("src", svinfo.server_icon);
+    $(".server-invite").addClass("popup-invite");
+  }, 10 * 1000);
 });
 
 $(".project-desc p i").click((e) => {
@@ -218,4 +229,8 @@ $(".form__input #email").keyup(() => {
   } else {
     $(".form__input #email").removeClass("error");
   }
+});
+
+$(".server-invite button.close").click(() => {
+  $(".server-invite").removeClass("popup-invite");
 });
