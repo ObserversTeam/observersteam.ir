@@ -1,5 +1,5 @@
 let NavVisibily = false;
-const BaseUrl = "https://api2.observersteam.ir";
+const BaseUrl = "http://localhost:3000";
 
 $(".menu").click(function () {
   if (!NavVisibily) {
@@ -167,6 +167,55 @@ $(".project-desc p i").click((e) => {
 // Form submit
 $(".form__input button").click((e) => {
   e.preventDefault();
-  if ($(".form__input #name").val() == "") {
+  if (
+    $(".form__input #name").val() !== "" &&
+    validator.isEmail($(".form__input #email").val()) &&
+    $(".form__input #suject").val() !== "" &&
+    $(".form__input #message").val() !== ""
+  ) {
+    $.ajax({
+      url: BaseUrl + "/contact",
+      type: "POST",
+      data: {
+        name: $(".form__input #name").val(),
+        email: $(".form__input #email").val(),
+        subject: $(".form__input #subject").val(),
+        message: $(".form__input #message").val(),
+        hash: localStorage.getItem("token"),
+      },
+    }).then((data) => {
+      if (data.success == true) {
+        $(".form__input #name").val("");
+        $(".form__input #email").val("");
+        $(".form__input #subject").val("");
+        $(".form__input #message").val("");
+        $(".form__input button")
+          .html(`Sent <i class="bi bi-check-circle-fill"></i>`)
+          .addClass("sent")
+          .attr("disabled", true);
+      } else {
+        $(".form__input button").text("Error!");
+        setTimeout(() => {
+          $(".form__input button").text("Send");
+        }, 1000 * 4);
+      }
+    });
+  } else {
+    $(".form__input button")
+      .html(`Error <i class="bi bi-exclamation-triangle-fill"></i>`)
+      .addClass("error");
+    setTimeout(() => {
+      $(".form__input button")
+        .html(`Submit <i class="bi bi-send"></i>`)
+        .removeClass("error");
+    }, 1000 * 4);
+  }
+});
+
+$(".form__input #email").keyup(() => {
+  if (!validator.isEmail($(".form__input #email").val())) {
+    $(".form__input #email").addClass("error");
+  } else {
+    $(".form__input #email").removeClass("error");
   }
 });

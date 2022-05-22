@@ -304,6 +304,9 @@
     border-radius: 2rem;
     row-gap: 2rem;
 }
+.form__input input{
+    transition: all 0.5s ease-in-out;
+}
 
 .form__input button {
     cursor: pointer;
@@ -422,6 +425,17 @@
 
 .copied {
     animation: copied 4s ease-in-out infinite;
+}
+
+.error {
+    color:#c2255c;
+}
+
+.sent {
+    color:white;
+    background-color: #2ecc71;
+    cursor: not-allowed !important;
+
 }
 
 @keyframes copied {
