@@ -21,19 +21,8 @@ $(".menu-item").click(function () {
   NavVisibily = false;
 });
 
-function gh(length) {
-  var result = "";
-  var characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+=-";
-  var charactersLength = characters.length;
-  for (var i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
-
 if (localStorage.getItem("token") == null) {
-  localStorage.setItem("token", gh(20));
+  localStorage.setItem("token", uuidv4());
 }
 localStorage.getItem("projects") == null
   ? localStorage.setItem(
