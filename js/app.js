@@ -223,3 +223,5 @@ $(".form__input #email").keyup(() => {
 $(".server-invite button.close").click(() => {
   $(".server-invite").removeClass("popup-invite");
 });
+
+$(".copyright span").text(new Date().getFullYear());

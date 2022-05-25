@@ -173,42 +173,75 @@
 
 .project {
     margin: 0 3rem;
+    background-color: #242424;
+    padding: 1rem ;
+    border-radius: 1.5rem;
 }
 
 .project img {
     width: 100%;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
+}
+
+.project img[alt="Onlynudes Bot"] {
+    filter: blur(5px);
+    transition: filter 0.5s ;
+}
+
+.project img[alt="Onlynudes Bot"]:hover {
+    filter: blur(0px);
 }
 
 .project-desc {
+
+    padding: 0rem 1rem;
+}
+.project-tags {
+    margin-bottom: 1rem;
+}
+.project-tags .tag {
+    display: inline-block;
+    background-color: #378cd4;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+}
+
+.project-desc p {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.project-title {
+    padding: 1rem 0rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-self: center;
-    padding: 1rem 0.5rem;
 }
 
-.project-desc a {
+.project-title  a {
     text-decoration: none;
     text-transform: uppercase;
     color: #3d9cec;
     font-size: 1.6rem;
 }
 
-.project-desc p>i {
+.project-title p>i {
     cursor: pointer;
     color: #c2255c;
     font-size: 1.6rem;
     
 }
 
-.project-desc  p  {
+.project-title  p  {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     font-size: 1.6rem;
     color: #ffffff;
-    padding: 0rem 1rem;
+    padding: 0rem 0.5rem;
 }
 
 .cards {
@@ -323,6 +356,55 @@
     align-items: flex-start;
     justify-content: space-between;
 }
+
+footer {
+    background-color: #242424;
+}
+footer div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+}
+
+footer .logo {
+    margin-top: 3rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.made {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.made i {
+    color: #3d9cec;
+    font-size: 1.2rem;
+}
+
+
 
 .menu {
     cursor: pointer;
