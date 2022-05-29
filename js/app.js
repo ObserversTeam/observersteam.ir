@@ -1,5 +1,5 @@
 let NavVisibily = false;
-const BaseUrl = "https://api2.observersteam.ir";
+const BaseUrl = "https://api.observersteam.ir";
 
 $(".menu").click(function () {
   if (!NavVisibily) {
