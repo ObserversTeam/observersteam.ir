@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background: #3d9cec;
+    color: #fff;
+}
+
 html {
     font-size: 62.5%;
 }
